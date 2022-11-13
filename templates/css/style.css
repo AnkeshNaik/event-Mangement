@@ -1,0 +1,17 @@
+body {
+    background: red;
+  }
+ 
+head{
+    background-color: yellow;
+}
+  nav {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    border: 2px solid #EBECF1;
+    border-radius: 30px;
+    animation: slide-in 1s ease-out;
+  }
