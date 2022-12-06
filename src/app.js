@@ -55,6 +55,15 @@ app.set('view engine', 'hbs')
 // });
 
 
+app.get("/",(req, res)=>{
+    res.render('login');
+
+})
+
+app.get("/contact",(req, res)=>{
+    res.render('contact');
+
+})
 app.post("/contact", async(req,res)=>{
     try{
         // res.send(req.body)
@@ -65,16 +74,7 @@ app.post("/contact", async(req,res)=>{
         res.status(500).send(error);
     }
 })
-// app.post("/login", async(req,res)=>{
-//     try{
-//         res.send(req.body)
-//         const userData1 = new User1(req.body);
-//         await userData1.save();
-//         res.status(201).render("contact");
-//     }catch(error){
-//         res.status(500).send(error);
-//     }
-// })
+
 
 app.get("/about", (req, res)=>{ 
     res.render('about')
@@ -91,10 +91,6 @@ app.get("/service", (req, res)=>{
 
 
 
-app.get("/",(req, res)=>{
-    res.render('login');
-
-})
 app.get("/login",(req, res)=>{
     res.render('login');
 
@@ -112,16 +108,6 @@ app.post("/signup",async(req,res)=>{
     res.render("signup")
 })
 
-// app.post("/login", async(req,res)=>{
-//     try{
-//         // res.send(req.body)
-//         const userData = new User1(req.body);
-//         await userData.save();
-//         res.status(201).render("contact");
-//     }catch(error){
-//         res.status(500).send(error);
-//     }
-// })
 
 app.post("/login",async(req,res)=>{
     try{
