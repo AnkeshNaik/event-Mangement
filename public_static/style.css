@@ -1,4 +1,4 @@
-body {
+/* body {
     background: #F9F8FD;
     font-family: 'Lexend Exa', sans-serif;
   }
@@ -13,7 +13,9 @@ body {
     border-radius: 30px;
     animation: slide-in 1s ease-out;
   }
-  
+  body{
+    background-color: red;
+  } */
   /* ul {
     position: relative;
     display: flex;
