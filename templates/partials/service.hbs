@@ -1,39 +1,80 @@
-
-
-<form action="/contact" method="POST ">
-<div style="max-width: 400px;">
-</div>
-<div style="padding-bottom: 18px;font-size : 24px;">Newsletter Subscription</div>
-<div style="padding-bottom: 18px;">NAME<span style="color: red;"> *</span><br/>
-<input type="text" id="data_2" name="data_2" style="max-width : 300px;" class="form-control"/>
-</div>
-<div style="padding-bottom: 18px;">ORGANIZATION<br/>
-<input type="text" id="data_3" name="data_3" style="max-width : 300px;" class="form-control"/>
-</div>
-<div style="padding-bottom: 18px;">EMAIL<span style="color: red;"> *</span><br/>
-<input type="text" id="data_4" name="data_4" style="max-width : 300px;" class="form-control"/>
-</div>
-<div style="padding-bottom: 18px;"><input name="skip_Submit" value="SUBSCRIBE" type="submit"/></div>
-
-
-                            <div>
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="mt-3">
-                            <label for="email" class="form-label">Your Email</label>
-                            <input type="text" name="email" class="form-control" placeholder="Your Email" required>
-                        </div class="mt-3">
-                        {{!-- <div class="mt-3">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-                        </div> --}}
-                        <div class="mt-3 mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea name="message" cols="20" rows="6" class="form-control"
-                                placeholder="message"></textarea>
-                        </div>
-                        <button class="btn btn-primary">
-                            Submit Form
-                        </button>
-</form>
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <!--<img src="images/frontImg.jpg" alt="">-->
+        <div class="text">
+          <span class="text-1">Every new friend is a <br> new adventure</span>
+          <span class="text-2">Let's get connected</span>
+        </div>
+      </div>
+      <div class="back">
+        <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
+        <div class="text">
+          <span class="text-1">Complete miles of journey <br> with one step</span>
+          <span class="text-2">Let's get started</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Login</div>
+          <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Enter your password" required>
+              </div>
+              <div class="text"><a href="#">Forgot password?</a></div>
+              <div class="button input-box">
+                <input type="submit" value="Sumbit">
+              </div>
+              <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+            </div>
+        </form>
+      </div>
+        <div class="signup-form">
+          <div class="title">Signup</div>
+        <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Enter your name" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Enter your password" required>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Sumbit">
+              </div>
+              <div class="text sign-up-text">Already have an account? <label >Login now</label></div>
+            </div>
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
