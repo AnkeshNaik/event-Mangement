@@ -1,0 +1,150 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Page</title>
+    <style>
+      /* CSS styles here */
+      body, html {
+        background-color: rgb(242, 246, 213);
+      }
+
+      body, p, input, select, textarea,label, button {
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: -0.2px;
+        font-size: 16px;
+      }
+
+      div, p {
+        color: #caccba;
+        text-shadow: 1px 1px 1px #FFF;
+      }
+
+      form {
+        padding: 16px;
+        width: 320px;
+        margin: 0 auto;
+      }
+
+      .segment {
+        padding: 32px 0;
+        text-align: center;
+      }
+
+      button, input {
+        border: 0;
+        outline: 0;
+        font-size: 16px;
+        border-radius: 320px;
+        padding: 16px;
+       background-color: #f8ef9e;
+        text-shadow: 1px 1px 0 #FFF;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 24px;
+        width: 100%;
+        	width: 60%;
+	
+
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+
+
+      }
+
+      input {
+        margin-right: 8px;
+        box-shadow:  inset 2px 2px 5px #f2ffb8, inset -5px -5px 10px #fffdc5;
+        width: 100%;
+        box-sizing: border-box;
+        transition: all 0.2s ease-in-out;
+        appearance: none;
+        -webkit-appearance: none;
+
+        &:focus {
+          box-shadow:  inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+        }
+      }
+
+      button {
+        color:#000000;
+        font-weight: bold;
+        box-shadow: -5px -5px 20px #efffca,  5px 5px 20px #ebffa2;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        font-weight: 600;
+
+        &:hover {
+          box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+        }
+
+        &:active {
+          box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #f5ffb3;
+        }
+
+        .icon {
+          margin-right: 8px;
+        }
+
+        &.unit {
+          border-radius: 8px;
+          line-height: 0;
+          width: 48px;
+          height: 48px;
+          display:inline-flex;
+          justify-content: center;
+          align-items:center;
+          margin: 0 8px;
+          font-size: 19.2px;
+
+          .icon {
+            margin-right: 0; 
+          }
+        }
+
+        &.red {
+          display: block;
+          width: 100%;
+          color:#AE1100;
+        }
+      }
+
+      .input-group {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        label {
+          margin: 0;
+          flex: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+  
+        
+	<form action="/add_event" >
+  	<label for="event-name">1.Click below to Add Event:</label>
+		<button type="submit">Add</button>
+	</form>
+    <form action="/delete1" method="get" >
+    <label for="event-name">2.Click below to Delete Event:</label>
+		<button type="submit">Delete</button>
+	</form>
+   
+	<form action="/get_events" method="POST" >   
+		<label for="event-name">3.Click below to Check Event:</label>
+		<input type="text" id="name" name="name" required><br>
+
+		<button type="submit">Check</button>
+	</form>
+</body>
+</html>
+
+
+
+
+
