@@ -1,6 +1,6 @@
 const mongoose= require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/new1',{
+mongoose.connect('mongodb+srv://ankeshnaik000:23NDCvtBQfRtBnLn@event1.now48mu.mongodb.net/?retryWrites=true&w=majority&appName=event1',{
     // useCreateIndex:true,
     // useNewUrlPraser:true,
     useUnifiedTopology:true

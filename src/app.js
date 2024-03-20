@@ -1,4 +1,5 @@
-
+//atlas password 23NDCvtBQfRtBnLn
+//mongodb+srv://ankeshnaik000:23NDCvtBQfRtBnLn@event1.now48mu.mongodb.net/?retryWrites=true&w=majority&appName=event1
 const express = require("express")
 
 require("./db/conn");
@@ -104,7 +105,6 @@ app.get("/signup", (req, res)=>{
 app.get("/service", (req, res)=>{ 
     res.render('service')
 });
-
 
 
 
