@@ -256,7 +256,6 @@ app.post('/add_event', async(req, res) => {
               <tbody>
                 ${events.map((User2) => `
                   <tr>
-                    <td>${User2.name}</td>
                     <td>${User2.event_name}</td>
                     <td>${User2.date}</td>
                     <td>${User2.time}</td>
