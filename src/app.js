@@ -152,7 +152,8 @@ app.post("/login",async(req,res)=>{
 // app.set('view engine', 'ejs');
 app.post('/add_event', async(req, res) => {
     const eventData = {
-      name: req.body.event_name,
+      name: req.body.name,
+      event_name: req.body.event_name,
       date: req.body.event_date,
       time: req.body.event_time,
       location: req.body.event_location
@@ -256,6 +257,7 @@ app.post('/add_event', async(req, res) => {
                 ${events.map((User2) => `
                   <tr>
                     <td>${User2.name}</td>
+                    <td>${User2.event_name}</td>
                     <td>${User2.date}</td>
                     <td>${User2.time}</td>
                     <td>${User2.location}</td>
@@ -495,6 +497,7 @@ app.get('/delete1', (req, res) => {
             ${deletedEvents.map(event => `
               <tr>
                 <td>${event.name}</td>
+                <td>${event.event_name}</td>
                 <td>${event.date}</td>
                 <td>${event.time}</td>
                 <td>${event.location}</td>
@@ -594,6 +597,7 @@ if (!deletedEvents) {
               ${deletedEvents.map(event => `
                 <tr>
                   <td>${event.name}</td>
+                  <td>${event.event_name}</td>
                   <td>${event.date}</td>
                   <td>${event.time}</td>
                   <td>${event.location}</td>
