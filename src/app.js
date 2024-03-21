@@ -87,7 +87,7 @@ app.post("/contact", async(req,res)=>{
         // res.send(req.body)
         const userData = new Usera(req.body);
         await userData.save();
-        res.status(201).render("index");
+        res.render("index");
     }catch(error){
         res.status(500).send(error);
     }

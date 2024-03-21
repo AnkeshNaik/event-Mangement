@@ -8,6 +8,10 @@ const mongoose =require("mongoose")
           type: String,
           required: true
         },
+        event_name: {
+          type: String,
+          required: true
+        },
         date: {
           type: Date,
           required: true
