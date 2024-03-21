@@ -199,87 +199,169 @@ app.post('/add_event', async(req, res) => {
 //     }
 //   });
 
-  app.post("/get_events",async(req,res)=>{
-    try{
-     const check = await User2.findOne({name:req.body.name})   
-     if(check.name===req.body.name){
-           const events = await User2.find({});
-        const eventTable = `
-          <html>
-          <head>
-            <title>Event Management</title>
+
+/////////////now commented////////////////////////
+
+//   app.post("/get_events",async(req,res)=>{
+//     try{
+//      const check = await User2.findOne({name:req.body.name})   
+//      if(check.name===req.body.name){
+//            const events = await User2.find({});
+//         const eventTable = `
+//           <html>
+//           <head>
+//             <title>Event Management</title>
            
-            <style>
-            body {
-              font-family: Arial, sans-serif;
-              background-color: #f5f5f5;
-            }
-            h1 {
-              text-align: center;
-              color: #2b2d42;
-            }
-            table {
-              margin: auto;
-              border-collapse: collapse;
-              background-color: #ffffff;
-              width: 100%;
-              box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-            }
-            th, td {
-              border: 1px solid #dddddd;
-              text-align: left;
-              padding: 8px;
-            }
-            th {
-              background-color: #2b2d42;
-              color: #ffffff;
-            }
-            tr:nth-child(even) {
-              background-color: #f2f2f2;
-            }
-            tr:hover {
-              background-color: #dddddd;
-            }
-          </style>
-          </head>
-          <body>
-            <h1>Event Management</h1>
-            <table>
-              <thead>
-                <tr>
-                  <th>Event Name</th>
-                  <th>Event Date</th>
-                  <th>Event Time</th>
-                  <th>Event Location</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${events.map((User2) => `
-                  <tr>
-                    <td>${User2.event_name}</td>
-                    <td>${User2.date}</td>
-                    <td>${User2.time}</td>
-                    <td>${User2.location}</td>
-                  </tr>
-                `).join('')}
-              </tbody>
-            </table>
-          </body>
-          </html>
-        `;
-        res.send(eventTable);
-      }
+//             <style>
+//             body {
+//               font-family: Arial, sans-serif;
+//               background-color: #f5f5f5;
+//             }
+//             h1 {
+//               text-align: center;
+//               color: #2b2d42;
+//             }
+//             table {
+//               margin: auto;
+//               border-collapse: collapse;
+//               background-color: #ffffff;
+//               width: 100%;
+//               box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+//             }
+//             th, td {
+//               border: 1px solid #dddddd;
+//               text-align: left;
+//               padding: 8px;
+//             }
+//             th {
+//               background-color: #2b2d42;
+//               color: #ffffff;
+//             }
+//             tr:nth-child(even) {
+//               background-color: #f2f2f2;
+//             }
+//             tr:hover {
+//               background-color: #dddddd;
+//             }
+//           </style>
+//           </head>
+//           <body>
+//             <h1>Event Management</h1>
+//             <table>
+//               <thead>
+//                 <tr>
+//                   <th>Event Name</th>
+//                   <th>Event Date</th>
+//                   <th>Event Time</th>
+//                   <th>Event Location</th>
+//                 </tr>
+//               </thead>
+//               <tbody>
+//                 ${events.map((User2) => `
+//                   <tr>
+//                     <td>${User2.event_name}</td>
+//                     <td>${User2.date}</td>
+//                     <td>${User2.time}</td>
+//                     <td>${User2.location}</td>
+//                   </tr>
+//                 `).join('')}
+//               </tbody>
+//             </table>
+//           </body>
+//           </html>
+//         `;
+//         res.send(eventTable);
+//       }
     
-     else{
-         res.send("wrong password")
+//      else{
+//          res.send("wrong password")
         
 
-     }
+//      }
+//   }
+//     catch{
+//         res.send("NOT FOUND")
+//     }
+// })
+app.post("/get_events", async (req, res) => {
+  try {
+      const check = await User2.findOne({ name: req.body.name });
+      if (check && check.name === req.body.name) {
+          const events = await User2.find({});
+          const eventTable = `
+              <html>
+              <head>
+                  <title>Event Management</title>
+                  <style>
+                      body {
+                          font-family: Arial, sans-serif;
+                          background-color: #f5f5f5;
+                      }
+                      h1 {
+                          text-align: center;
+                          color: #2b2d42;
+                      }
+                      table {
+                          margin: auto;
+                          border-collapse: collapse;
+                          background-color: #ffffff;
+                          width: 100%;
+                          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                      }
+                      th, td {
+                          border: 1px solid #dddddd;
+                          text-align: left;
+                          padding: 8px;
+                      }
+                      th {
+                          background-color: #2b2d42;
+                          color: #ffffff;
+                      }
+                      tr:nth-child(even) {
+                          background-color: #f2f2f2;
+                      }
+                      tr:hover {
+                          background-color: #dddddd;
+                      }
+                  </style>
+              </head>
+              <body>
+                  <h1>Event Management</h1>
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>Event Name</th>
+                              <th>Event Date</th>
+                              <th>Event Time</th>
+                              <th>Event Location</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          ${events.map((User2) => `
+                              <tr>
+                                  <td>${User2.event_name}</td>
+                                  <td>${User2.date}</td>
+                                  <td>${User2.time}</td>
+                                  <td>${User2.location}</td>
+                              </tr>
+                          `).join('')}
+                      </tbody>
+                  </table>
+                  <form action="/delete1" method="get">
+                      <label for="event-name">2. Click below to Delete Event:</label>
+                      <button type="submit">Delete</button>
+                  </form>
+              </body>
+              </html>
+          `;
+          res.send(eventTable);
+      } else {
+          res.send("wrong password");
+      }
+  } catch (error) {
+      res.send("NOT FOUND");
   }
-    catch{
-        res.send("wrong details")
-    }
-})
+});
 
 
 
