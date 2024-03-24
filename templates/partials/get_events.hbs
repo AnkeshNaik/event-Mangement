@@ -129,9 +129,13 @@
 	<form action="/add_event" method="get">
   	<label for="event-name">1.Click below  to Add an Event:</label>
 		<button type="submit">Add</button>
-	
+	</form>
+    <form action="/delete1" method="get" >
+    <label for="event-name">2.Click below to Delete Event:</label>
+		<button type="submit">Delete</button>
+	</form>
    
-	<form action="/get_events" method="post" >   
+	<form action="/get_event" method="post" >   
 		<label for="event-name">3.Click below to Check Event:</label>
 		<input type="text" id="name" name="name" required><br>
 

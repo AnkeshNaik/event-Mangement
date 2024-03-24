@@ -135,7 +135,7 @@ app.post("/login",async(req,res)=>{
     try{
      const check = await User1.findOne({email:req.body.email})   
      if(check.password===req.body.password){
-         res.render("contact")
+         res.render("home")
      }
      else{
          res.send("wrong password")
@@ -283,7 +283,7 @@ app.post('/add_event', async(req, res) => {
 //         res.send("NOT FOUND")
 //     }
 // })
-app.post("/get_events", async (req, res) => {
+app.post("/get_event", async (req, res) => {
   try {
       const check = await User2.findOne({ name: req.body.name });
       if (check && check.name === req.body.name) {
