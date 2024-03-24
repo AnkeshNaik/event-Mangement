@@ -348,7 +348,7 @@ app.post("/get_events", async (req, res) => {
                       </tbody>
                   </table>
                   <form action="/delete1" method="get">
-                      <label for="event-name">2. Click below to Delete Event:</label>
+                      <label for="event-name">Click below to Delete Event:</label>
                       <button type="submit">Delete</button>
                   </form>
               </body>
